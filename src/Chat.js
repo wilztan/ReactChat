@@ -6,7 +6,8 @@ import socketIOClient from 'socket.io-client';
 import $ from 'jquery'
 
 // const url = 'http://127.0.0.1:4001';
-const url = 'http://10.62.55.56:4001';
+// const url = 'http://10.62.55.56:4001';
+const url ='https://nodechatserver123.herokuapp.com/'
 const socket = socketIOClient(url);
 
 
