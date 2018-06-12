@@ -120,8 +120,8 @@ class Chat extends Component {
             changeFunction={this.handleOnChange}
             messageValue={this.state.message}
           />
-          <ExtraMessageFormBar
-          />
+          {/* <ExtraMessageFormBar
+          /> */}
         </div>
       </div>
     );
