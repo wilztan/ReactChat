@@ -1,0 +1,97 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 80px;
+}
+
+.App-header {
+  background-color: #222;
+  padding: 20px;
+  color: white;
+}
+
+.App-title {
+  font-size: 1.5em;
+}
+
+.App-intro {
+  font-size: large;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+   }
+  to {
+    transform: rotate(360deg);
+   }
+}
+
+* {
+  margin: 0; padding: 0; box-sizing: border-box;
+}
+
+body {
+  font: 13px Helvetica, Arial;
+}
+
+.logout{
+  background-color:  #222;
+  border: none;
+  color: #fff;
+  text-align: right;
+  width: 100%;
+  padding: 10px;
+}
+
+.message-list{
+  padding-bottom: 30px;
+  font-size: 15px;
+}
+
+.inputName{
+  margin-top: 40px;
+  font-size: 20px;
+}
+
+.inputName input, .inputName input:focus{
+  outline: none;
+  font-size: 20px;
+  border: none;
+  border-bottom: 1px solid;
+}
+
+.inputName input:focus{
+  animation: inputChange 1s forwards;
+}
+
+@keyframes inputChange {
+  from {
+    border-bottom: 1px solid black;
+  }
+  to{
+    border-bottom: 1px solid #03A9F4;
+  }
+}
+
+
+.inputName button{
+  font-size: 20px;
+  margin-left: 10px;
+  min-width: 80px;
+  background-color: #FDD835;
+  border: none;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.bottom-absolute{
+    background: #000;
+    padding: 3px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}

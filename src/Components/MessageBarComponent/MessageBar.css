@@ -1,0 +1,45 @@
+.message-list small{
+  float: right;
+  font-size: 10px;
+}
+
+.message-friend{
+  display: -webkit-flex; /* Safari */
+  -webkit-align-items: flex-start; /* Safari 7.0+ */
+  display: flex;
+  align-items: flex-start;
+}
+
+.message-me{
+  display: -webkit-flex; /* Safari */
+  -webkit-align-items: flex-end; /* Safari 7.0+ */
+  display: flex;
+  align-items: flex-end;
+  flex-direction: row-reverse;
+}
+
+.message-friend .messageBubble{
+  background: #81C784;
+}
+
+.message-me .messageBubble{
+  background: #ECEFF1;
+}
+
+.messageBubble{
+
+  margin: 10px;
+  padding: 10px;
+  max-width: 70%;
+  display : inline-block ;
+  border-radius: 10px;
+}
+
+.messageBubble .buble-username{
+  font-weight: bold;
+  text-align: left;
+}
+
+.messageBubble .buble-message{
+  text-align: left;
+}

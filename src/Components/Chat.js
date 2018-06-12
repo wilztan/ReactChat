@@ -1,33 +1,16 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './Chat.css';
-
 import socketIOClient from 'socket.io-client';
-import $ from 'jquery'
 
-// const url = 'http://127.0.0.1:4001';
-// const url = 'http://10.62.55.56:4001';
+import logo from './../Assets/logo.svg';
+import './Chat.css';
+import MessageBar from './MessageBarComponent/MessageBar';
+import ChatMessageFormBar from './FormBar/ChatMessageFormBar';
+import ExtraMessageFormBar from './FormBar/ExtraMessageFormBar';
+
 const url ='https://nodechatserver123.herokuapp.com/'
 const socket = socketIOClient(url);
 
-
-
-class MessageBar extends Component {
-  render(){
-    const {user,message,time,position} = this.props;
-    return(
-      <div className={position===0? "message-friend" : "message-me"}>
-        <div className="messageBubble">
-          <div className="buble-username">{user}</div>
-          <div className="buble-message">{message}</div>
-          <small >{time}</small>
-        </div>
-      </div>
-    )
-  }
-}
-
-class App extends Component {
+class Chat extends Component {
   constructor(){
     super();
     this.state={
@@ -86,7 +69,6 @@ class App extends Component {
   }
 
   send(params,msg) {
-    const socket = socketIOClient(url);
     socket.emit(params,msg);
   }
 
@@ -131,14 +113,20 @@ class App extends Component {
           {Message}
         </div>
         <div className="bottom" />
-        <form className="form-message" onSubmit={this.handleSubmit}>
-          <input className="message" type="text" onChange={this.handleOnChange} value={this.state.message}/>
-          <button>Send</button>
-        </form>
+
+        <div className="bottom-absolute">
+          <ChatMessageFormBar
+            submitFunction={this.handleSubmit}
+            changeFunction={this.handleOnChange}
+            messageValue={this.state.message}
+          />
+          <ExtraMessageFormBar
+          />
+        </div>
       </div>
     );
   }
 }
 
 
-export default App;
+export default Chat;
